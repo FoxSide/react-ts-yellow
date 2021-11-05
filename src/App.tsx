@@ -4,10 +4,10 @@ import './App.css';
 function App() {
     console.log('App rendered')
     return <>
-        <AppTitle/>
-        <Rating/>
-        <Accordion/>
-        <Rating/>
+        <AppTitle />
+        <Rating />
+        <Accordion />
+        <Rating />
     </>
 }
 
@@ -20,10 +20,10 @@ function Rating() {
     console.log('Rating rendered')
     return (
         <>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
+            <Star />
+            <Star />
+            <Star />
+            <Star />
         </>
     )
 }
@@ -37,8 +37,8 @@ function Accordion() {
     console.log('Accordion rendered')
     return (
         <>
-            <AccordionTitle/>
-            <AccordionBody/>
+            <AccordionTitle />
+            <AccordionBody />
         </>)
 }
 
