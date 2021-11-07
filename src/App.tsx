@@ -11,7 +11,7 @@ function App() {
         Arcticle 1
         <Rating value={5}/>
         <Accordion title={'Menu'} collapsed={true}/>
-        <Accordion title={'Settings'} collapsed={false}/>
+        <Accordion title={'My friends'} collapsed={false}/>
         Article 2
         <Rating value={2}/>
     </>
