@@ -1,33 +1,34 @@
 import React from 'react';
 import './App.css';
-import {Accordion} from "./components/accordion/accordion";
-import {Rating} from "./components/rating/rating";
+import {OnOf} from "./components/OnOf/OnOf";
+import {UncontrolledAccordion} from "./components/accordion/uncontrolledAccordion";
+import {UncontrolledRating} from "./components/rating/UncontrolledRating";
 
 function App() {
-    console.log('App rendered')
-    return <>
-        <PageTitle title={'This is APP component'}/>
-        <PageTitle title={'My friends'}/>
-        Arcticle 1
-        <Accordion title={'Menu'} collapsed={true}/>
-        <Accordion title={'Setting'} collapsed={false}/>
-        Article 2
-        <Rating value={0}/>
-        <Rating value={1}/>
-        <Rating value={2}/>
-        <Rating value={3}/>
-        <Rating value={4}/>
-        <Rating value={5}/>
-    </>
+  return <div>
+    <PageTitle title={'This is APP component'}/>
+    <PageTitle title={'My friends'}/>
+    Arcticle 1
+    <UncontrolledAccordion title={'Menu'}/>
+    <UncontrolledAccordion title={'Setting'}/>
+    Article 2
+    <OnOf/>
+    <OnOf/>
+    <OnOf/>
+    <UncontrolledRating/>
+    <UncontrolledRating/>
+    <UncontrolledRating/>
+    <UncontrolledRating/>
+  </div>
 }
 
 type PageTitlePropsType = {
-    title: string
+  title: string
 }
 
 function PageTitle(props: PageTitlePropsType) {
-    console.log('PageTitle rendered')
-    return <h1>{props.title}</h1>
+  console.log('PageTitle rendered')
+  return <h1>{props.title}</h1>
 }
 
 export default App;
