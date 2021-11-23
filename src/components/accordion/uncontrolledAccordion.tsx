@@ -2,7 +2,6 @@ import React, {useState} from "react";
 
 type AccordionPropsType = {
   title: string
-  // collapsed: boolean
 }
 
 export function UncontrolledAccordion(props: AccordionPropsType) {
@@ -10,23 +9,21 @@ export function UncontrolledAccordion(props: AccordionPropsType) {
   let [collapsed, setCollapsed] = useState(true)
 
   return <div>
-    <AccordionTitle title={props.title}/>
-    <button onClick={() => {
-      collapsed ? setCollapsed(false) : setCollapsed(true)
-    }}>Toggle
-    </button>
+    <AccordionTitle title={props.title} onClick={() => {setCollapsed(!collapsed)}}/>
     {collapsed && <AccordionBody/>}
   </div>
 }
 
 type AccordionTitlepropsType = {
   title: string
+  onClick: () => void
 }
 
 function AccordionTitle(props: AccordionTitlepropsType) {
   console.log('AccordionTitle rendered')
-  return <h3>{props.title}</h3>
+  return <h3 onClick={() => {props.onClick()}}>{props.title}</h3>
 }
+
 
 function AccordionBody() {
   console.log('AccordionBody rendered')
