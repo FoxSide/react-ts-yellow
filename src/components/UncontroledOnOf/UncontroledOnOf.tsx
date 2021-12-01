@@ -2,11 +2,12 @@ import React, {useState} from "react";
 
 type PropsType = {
   onChange: (on: boolean) => void
+  defoultOn?: boolean
 }
 
 
 export function UncontroledOnOf(props: PropsType) {
-  let [on, setOn] = useState(false)
+  let [on, setOn] = useState(props.defoultOn)
 
   const onStyle = {
     width: '30px',
