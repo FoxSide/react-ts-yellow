@@ -20,13 +20,11 @@ type AccordionTitlepropsType = {
 }
 
 function AccordionTitle(props: AccordionTitlepropsType) {
-  console.log('AccordionTitle rendered')
   return <h3 onClick={() => {props.onClick()}}>{props.title}</h3>
 }
 
 
 function AccordionBody() {
-  console.log('AccordionBody rendered')
   return (
     <>
       <ul>
